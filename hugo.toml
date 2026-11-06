@@ -1,0 +1,7 @@
+baseURL = "https://jakentech.github.io/"
+locale = "en-gb"
+title = "JakeNTech"
+theme = "keith"
+
+[markup.goldmark.renderer]
+unsafe= true

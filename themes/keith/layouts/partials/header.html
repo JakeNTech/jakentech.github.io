@@ -1,0 +1,21 @@
+<header>
+    <nav>
+        <ul>
+            {{/*  If the page is the homepage  */}}
+            {{if (eq .Title "JakeNTech")}}
+            <li><a href="{{ .Site.BaseURL}}" id="active_page">Home</a></li>
+            <li><a href="{{ ref . "blog"}}">Blog</a></li>
+            <li><a href="{{ ref . "episode_selector"}}">Episode_Selector</a></li>
+            {{else if (eq .Title "Episode Randomiser")}}
+            <li><a href="{{ .Site.BaseURL}}">Home</a></li>
+            <li><a href="{{ ref . "blog"}}">Blog</a></li>
+            <li><a href="{{ ref . "episode_selector"}}" id="active_page">Episode_Selector</a></li>
+            {{/*  Anything else/Blog Posts  */}}
+            {{else}}
+            <li><a href="{{ .Site.BaseURL}}">Home</a></li>
+            <li><a href="{{ ref . "blog"}}" id="active_page">Blog</a></li>
+            <li><a href="{{ ref . "episode_selector"}}">Episode_Selector</a></li>
+            {{end}}
+        </ul>
+    </nav>
+</header>
