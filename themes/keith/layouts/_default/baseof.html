@@ -7,7 +7,7 @@
         <title>{{ block "title" .}}{{ .Title}} - JakeNTech{{end}}</title>
         <link rel="shortcut icon" href="/assets/img/favicon.png"/>
         {{/*  My CSS  */}}
-        {{ $style := resources.Get "scss/style.scss" | toCSS }}
+        {{ $style := resources.Get "css/style.css"}}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
         {{/*  Google Font  */}}
         <link rel="preconnect" href="https://fonts.googleapis.com">
